@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap');
+
+html {
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, .title {
+  font-family: 'PT Serif', serif;
+}
+
+h3, p, .name {
+  font-family: Poppins, sans-serif;
+  font-size: 1.2rem;
+}
+
+h3, .title {
+  text-transform: uppercase;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: -0.045em;
+  display: inline;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 27px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+img {
+  max-width: 240px;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  font-family: Montserrat, sans-serif;
+  text-align: center;
+  padding-top: 2.5rem;
+}
+
+.main-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.content-container {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.top-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 100px;
+}
+
+.top-text {
+  display: inline;
+}
+
+.top-text > p {
+  width: 439px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 500px 500px;
+  justify-items: center;
+  align-items: start;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 250px auto;
+  grid-template-rows: 350px 42px;
+}
+
+.card:nth-child(3n+2) {
+  align-self: end;
+}
+
+.title {
+  font-size: 12px;
+  line-height: 16px;
+  align-self: start;
+  justify-self: end;
+  padding: 0;
+  margin-top: 70px;
+  margin-left: -75px;
+  width: 150px;
+  transform: rotate(90deg);
+}
+
+.name {
+  font-weight: 600;
+  padding: 10px 0;
+  margin: 0;
+}
