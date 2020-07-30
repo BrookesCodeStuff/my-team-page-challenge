@@ -89,12 +89,8 @@ footer {
 
 .card {
   display: grid;
-  grid-template-columns: 250px auto;
-  grid-template-rows: 350px 42px;
-}
-
-.card:nth-child(3n+2) {
-  align-self: end;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
 }
 
 .title {
@@ -103,14 +99,52 @@ footer {
   align-self: start;
   justify-self: end;
   padding: 0;
-  margin-top: 70px;
-  margin-left: -75px;
-  width: 150px;
-  transform: rotate(90deg);
+  margin: 0;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
 }
 
 .name {
   font-weight: 600;
   padding: 10px 0;
   margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .card:nth-child(3n+2) {
+  align-self: end;
+}
+}
+
+@media screen and (max-width: 767px) {
+
+  p {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  img {
+    min-width: 139px;
+    max-width: 175px;
+  }
+
+  .top-container {
+    flex-direction: column;
+    padding-bottom: 50px;
+  }
+
+  .top-text > p {
+    width: 333px;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 350px 350px 350px;
+    justify-items: start;
+  }
+
+  .card:nth-child(even) {
+    justify-self: start;
+    align-self: end;
+  }
 }
